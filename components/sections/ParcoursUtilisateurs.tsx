@@ -12,6 +12,7 @@ const personas = [
     role: "Étudiante demandeuse",
     tag: "Je cherche un logement",
     emoji: "👩‍🎓",
+    faceOrigin: "76% 12%",
     tagStyle: "bg-[#E7E8FD] text-[#7034F4]",
     borderColor: "border-t-[#7034F4]",
     quote: "L'hôtel, c'est trop cher. Un bail d'un an, c'est trop long. Comment trouver une chambre juste pour mon stage de 2 mois à Lyon ?",
@@ -28,6 +29,7 @@ const personas = [
     role: "Étudiant annonceur",
     tag: "Je propose mon logement",
     emoji: "👨‍💻",
+    faceOrigin: "30% 2%",
     tagStyle: "bg-[#16229C] text-white",
     borderColor: "border-t-[#16229C]",
     quote: "Je pars en échange à l'étranger pendant 3 mois. Mon loyer continue de tourner... et ma chambre va rester vide tout ce temps ?",
@@ -45,8 +47,14 @@ function PersonaCard({ p }: { p: typeof personas[0] }) {
     <div className={`bg-white rounded-3xl border-t-4 ${p.borderColor} shadow-sm overflow-hidden`}>
       <div className="p-8 pb-0">
         <div className="flex items-center gap-4 mb-6">
-          <div className="w-16 h-16 bg-[#E7E8FD] rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
-            {p.emoji}
+          <div className="w-16 h-16 rounded-2xl flex-shrink-0 overflow-hidden relative ring-2 ring-[#BFB0FC] shadow-md">
+            <Image
+              src="/images/auth/bin2.png"
+              alt={p.name}
+              fill
+              className="object-cover scale-[3]"
+              style={{ transformOrigin: p.faceOrigin }}
+            />
           </div>
           <div>
             <h3 className="font-extrabold text-[#16229C] text-2xl">{p.name}</h3>
