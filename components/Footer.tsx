@@ -12,7 +12,7 @@ const navItems = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2D1B8E] text-white py-12">
+    <footer className="bg-[#16229C] text-white py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <Link href="/">

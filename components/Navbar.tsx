@@ -34,8 +34,8 @@ export default function Navbar() {
               href={item.href}
               className={`text-sm font-medium transition-colors ${
                 pathname === item.href
-                  ? "text-[#6B4EFF] font-semibold"
-                  : "text-gray-600 hover:text-[#6B4EFF]"
+                  ? "text-[#7034F4] font-semibold"
+                  : "text-gray-600 hover:text-[#7034F4]"
               }`}
             >
               {item.label}
@@ -45,7 +45,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-gray-600 hover:text-[#6B4EFF]"
+          className="md:hidden text-gray-600 hover:text-[#7034F4]"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
@@ -61,7 +61,7 @@ export default function Navbar() {
               href={item.href}
               onClick={() => setOpen(false)}
               className={`text-sm font-medium ${
-                pathname === item.href ? "text-[#6B4EFF] font-semibold" : "text-gray-600"
+                pathname === item.href ? "text-[#7034F4] font-semibold" : "text-gray-600"
               }`}
             >
               {item.label}

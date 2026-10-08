@@ -12,8 +12,8 @@ const personas = [
     role: "Étudiante demandeuse",
     tag: "Je cherche un logement",
     emoji: "👩‍🎓",
-    tagStyle: "bg-[#E7E8FD] text-[#6B4EFF]",
-    borderColor: "border-t-[#6B4EFF]",
+    tagStyle: "bg-[#E7E8FD] text-[#7034F4]",
+    borderColor: "border-t-[#7034F4]",
     quote: "L'hôtel, c'est trop cher. Un bail d'un an, c'est trop long. Comment trouver une chambre juste pour mon stage de 2 mois à Lyon ?",
     tags: ["Stage · 2 mois", "Nouveau à Lyon", "Budget étudiant", "Pressée par le temps"],
     painGains: [
@@ -28,8 +28,8 @@ const personas = [
     role: "Étudiant annonceur",
     tag: "Je propose mon logement",
     emoji: "👨‍💻",
-    tagStyle: "bg-[#2D1B8E] text-white",
-    borderColor: "border-t-[#2D1B8E]",
+    tagStyle: "bg-[#16229C] text-white",
+    borderColor: "border-t-[#16229C]",
     quote: "Je pars en échange à l'étranger pendant 3 mois. Mon loyer continue de tourner... et ma chambre va rester vide tout ce temps ?",
     tags: ["Échange universitaire", "Absent 3 mois", "Loyer à couvrir", "Besoin de confiance"],
     painGains: [
@@ -49,7 +49,7 @@ function PersonaCard({ p }: { p: typeof personas[0] }) {
             {p.emoji}
           </div>
           <div>
-            <h3 className="font-extrabold text-[#2D1B8E] text-2xl">{p.name}</h3>
+            <h3 className="font-extrabold text-[#16229C] text-2xl">{p.name}</h3>
             <p className="text-gray-400 text-sm">{p.age} · {p.role}</p>
             <span className={`inline-block mt-1.5 text-xs font-semibold px-3 py-1 rounded-full ${p.tagStyle}`}>
               {p.tag}
@@ -57,15 +57,15 @@ function PersonaCard({ p }: { p: typeof personas[0] }) {
           </div>
         </div>
 
-        <blockquote className="bg-[#E7E8FD] rounded-2xl px-6 py-5 mb-4 border-l-4 border-[#6B4EFF]">
-          <p className="text-[#2D1B8E] font-semibold text-base leading-relaxed italic">
+        <blockquote className="bg-[#E7E8FD] rounded-2xl px-6 py-5 mb-4 border-l-4 border-[#7034F4]">
+          <p className="text-[#16229C] font-semibold text-base leading-relaxed italic">
             « {p.quote} »
           </p>
         </blockquote>
 
         <div className="flex flex-wrap gap-2 mb-6">
           {p.tags.map((tag, i) => (
-            <span key={i} className="text-xs font-medium bg-[#E7E8FD] text-[#6B4EFF] px-3 py-1.5 rounded-full">
+            <span key={i} className="text-xs font-medium bg-[#E7E8FD] text-[#7034F4] px-3 py-1.5 rounded-full">
               {tag}
             </span>
           ))}
@@ -75,7 +75,7 @@ function PersonaCard({ p }: { p: typeof personas[0] }) {
       <div className="border-t border-purple-50">
         <div className="grid grid-cols-2 text-xs font-bold text-gray-400 uppercase tracking-wider px-8 py-3 bg-gray-50/50">
           <span>Problème</span>
-          <span className="text-[#6B4EFF]">Solution BailLyon</span>
+          <span className="text-[#7034F4]">Solution BailLyon</span>
         </div>
         {p.painGains.map((pg, k) => (
           <div key={k} className={`grid grid-cols-2 px-8 py-4 gap-4 text-sm ${k % 2 === 0 ? "bg-white" : "bg-gray-50/30"}`}>
@@ -83,7 +83,7 @@ function PersonaCard({ p }: { p: typeof personas[0] }) {
               <span className="text-red-400 mt-0.5 flex-shrink-0">✕</span>{pg.pain}
             </div>
             <div className="flex items-start gap-2 text-gray-700 font-medium">
-              <span className="text-[#6B4EFF] mt-0.5 flex-shrink-0">✓</span>{pg.gain}
+              <span className="text-[#7034F4] mt-0.5 flex-shrink-0">✓</span>{pg.gain}
             </div>
           </div>
         ))}
@@ -114,17 +114,17 @@ const lucasFrames = [
 function StoryboardGrid({ frames, name, emoji }: { frames: typeof aliceFrames; name: string; emoji: string }) {
   return (
     <div className="bg-[#E7E8FD] rounded-3xl p-6">
-      <h4 className="font-bold text-[#2D1B8E] text-lg mb-5">{emoji} {name}</h4>
+      <h4 className="font-bold text-[#16229C] text-lg mb-5">{emoji} {name}</h4>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
         {frames.map((f, i) => (
           <div key={i} className="flex flex-col">
             <div className="rounded-2xl overflow-hidden aspect-square relative shadow-sm">
               <Image src={f.img} alt={f.caption} fill className="object-cover scale-[1.03]" />
-              <div className="absolute top-2 left-2 w-6 h-6 bg-[#6B4EFF] text-white rounded-full flex items-center justify-center text-xs font-bold z-10">
+              <div className="absolute top-2 left-2 w-6 h-6 bg-[#7034F4] text-white rounded-full flex items-center justify-center text-xs font-bold z-10">
                 {i + 1}
               </div>
             </div>
-            <p className="text-xs font-semibold text-[#2D1B8E] mt-2 leading-relaxed">{f.caption}</p>
+            <p className="text-xs font-semibold text-[#16229C] mt-2 leading-relaxed">{f.caption}</p>
           </div>
         ))}
       </div>
@@ -171,7 +171,7 @@ function JourneyTable({ steps, name, tagStyle }: { steps: typeof aliceSteps; nam
               <td className="p-3 text-xs font-bold text-gray-400 uppercase tracking-wider w-28">Étape</td>
               {steps.map((s) => (
                 <td key={s.phase} className="p-3 text-center">
-                  <span className="inline-block bg-[#6B4EFF] text-white text-xs font-bold px-3 py-1 rounded-full">{s.phase}</span>
+                  <span className="inline-block bg-[#7034F4] text-white text-xs font-bold px-3 py-1 rounded-full">{s.phase}</span>
                 </td>
               ))}
             </tr>
@@ -190,7 +190,7 @@ function JourneyTable({ steps, name, tagStyle }: { steps: typeof aliceSteps; nam
               {steps.map((s) => (
                 <td key={s.phase} className="p-3 text-center">
                   <div className="text-2xl mb-1">{s.emotionIcon}</div>
-                  <p className="text-xs text-[#6B4EFF] italic">{s.emotion}</p>
+                  <p className="text-xs text-[#7034F4] italic">{s.emotion}</p>
                 </td>
               ))}
             </tr>
@@ -212,9 +212,9 @@ function JourneyTable({ steps, name, tagStyle }: { steps: typeof aliceSteps; nam
       <div className="md:hidden flex flex-col gap-3">
         {steps.map((s) => (
           <div key={s.phase} className="bg-white rounded-2xl p-4 border border-purple-100 shadow-sm">
-            <span className="inline-block bg-[#6B4EFF] text-white text-xs font-bold px-3 py-1 rounded-full mb-3">{s.phase}</span>
+            <span className="inline-block bg-[#7034F4] text-white text-xs font-bold px-3 py-1 rounded-full mb-3">{s.phase}</span>
             <ul className="space-y-1 mb-2">{s.actions.map((a, i) => <li key={i} className="text-xs text-gray-600">• {a}</li>)}</ul>
-            <p className="text-xs text-[#6B4EFF] italic mb-1">{s.emotionIcon} {s.emotion}</p>
+            <p className="text-xs text-[#7034F4] italic mb-1">{s.emotionIcon} {s.emotion}</p>
             <p className="text-xs text-red-400 mb-1">✕ {s.pain}</p>
             <p className="text-xs text-emerald-600">✓ {s.ux}</p>
           </div>
@@ -228,10 +228,10 @@ function JourneyTable({ steps, name, tagStyle }: { steps: typeof aliceSteps; nam
 function SectionTitle({ number, title }: { number: string; title: string }) {
   return (
     <div className="flex items-center gap-4 mb-10">
-      <span className="text-white bg-[#6B4EFF] w-12 h-12 rounded-xl flex items-center justify-center text-base font-extrabold flex-shrink-0">
+      <span className="text-white bg-[#7034F4] w-12 h-12 rounded-xl flex items-center justify-center text-base font-extrabold flex-shrink-0">
         {number}
       </span>
-      <h2 className="text-2xl font-extrabold text-[#2D1B8E]">{title}</h2>
+      <h2 className="text-2xl font-extrabold text-[#16229C]">{title}</h2>
     </div>
   );
 }
@@ -242,10 +242,10 @@ export default function ParcoursUtilisateurs() {
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-[#6B4EFF] font-semibold tracking-widest text-sm uppercase mb-3">
+          <p className="text-[#7034F4] font-semibold tracking-widest text-sm uppercase mb-3">
             Parcours utilisateurs
           </p>
-          <h1 className="text-4xl font-extrabold text-[#2D1B8E]">
+          <h1 className="text-4xl font-extrabold text-[#16229C]">
             Comprendre nos utilisateurs
           </h1>
         </div>
@@ -264,8 +264,8 @@ export default function ParcoursUtilisateurs() {
 
         <section className="mb-20">
           <SectionTitle number="03" title="User Journey Map" />
-          <JourneyTable steps={aliceSteps} name="👩‍🎓 Alice — Étudiante demandeuse" tagStyle="bg-[#E7E8FD] text-[#6B4EFF]" />
-          <JourneyTable steps={lucasSteps} name="👨‍💻 Lucas — Étudiant annonceur" tagStyle="bg-[#2D1B8E] text-white" />
+          <JourneyTable steps={aliceSteps} name="👩‍🎓 Alice — Étudiante demandeuse" tagStyle="bg-[#E7E8FD] text-[#7034F4]" />
+          <JourneyTable steps={lucasSteps} name="👨‍💻 Lucas — Étudiant annonceur" tagStyle="bg-[#16229C] text-white" />
         </section>
 
         <section>
@@ -274,8 +274,8 @@ export default function ParcoursUtilisateurs() {
             {[{ name: "Alice — Demandeuse", emoji: "👩‍🎓" }, { name: "Lucas — Annonceur", emoji: "👨‍💻" }].map((p) => (
               <div key={p.name} className="section-placeholder rounded-2xl min-h-64 flex flex-col items-center justify-center text-[#9B87FF] text-center p-8">
                 <div className="text-4xl mb-3">{p.emoji}</div>
-                <p className="font-bold text-lg text-[#6B4EFF]">Value Proposition Canvas</p>
-                <p className="font-semibold text-[#2D1B8E] mt-1">{p.name}</p>
+                <p className="font-bold text-lg text-[#7034F4]">Value Proposition Canvas</p>
+                <p className="font-semibold text-[#16229C] mt-1">{p.name}</p>
                 <p className="text-xs mt-2 opacity-60">Remplacer par le canvas (image)</p>
               </div>
             ))}

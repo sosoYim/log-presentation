@@ -3,10 +3,10 @@ export default function PO() {
     <section className="py-24 bg-[#F7F5FF]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-[#6B4EFF] font-semibold tracking-widest text-sm uppercase mb-3">
+          <p className="text-[#7034F4] font-semibold tracking-widest text-sm uppercase mb-3">
             Product Owner
           </p>
-          <h2 className="text-4xl font-extrabold text-[#2D1B8E]">
+          <h2 className="text-4xl font-extrabold text-[#16229C]">
             Vision produit
           </h2>
           <p className="text-gray-500 mt-3">Stratégie, priorisation et roadmap — par Dylan</p>
@@ -15,7 +15,7 @@ export default function PO() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Lean Canvas */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-purple-50">
-            <div className="bg-[#2D1B8E] px-6 py-4">
+            <div className="bg-[#16229C] px-6 py-4">
               <h3 className="font-bold text-white text-lg">Lean Canvas</h3>
               <p className="text-white/60 text-sm">Vision et modèle économique</p>
             </div>
@@ -31,7 +31,7 @@ export default function PO() {
 
           {/* Roadmap */}
           <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-purple-50">
-            <div className="bg-[#6B4EFF] px-6 py-4">
+            <div className="bg-[#7034F4] px-6 py-4">
               <h3 className="font-bold text-white text-lg">Roadmap</h3>
               <p className="text-white/60 text-sm">Scénario minimal → cible</p>
             </div>
@@ -48,7 +48,7 @@ export default function PO() {
 
           {/* EPICs */}
           <div className="md:col-span-2 bg-white rounded-3xl overflow-hidden shadow-sm border border-purple-50">
-            <div className="bg-[#1E0E6B] px-6 py-4">
+            <div className="bg-[#0D1669] px-6 py-4">
               <h3 className="font-bold text-white text-lg">EPICs & Backlog</h3>
               <p className="text-white/60 text-sm">Spécifications fonctionnelles détaillées</p>
             </div>

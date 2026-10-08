@@ -10,10 +10,10 @@ export default function Team() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-[#6B4EFF] font-semibold tracking-widest text-sm uppercase mb-3">
+          <p className="text-[#7034F4] font-semibold tracking-widest text-sm uppercase mb-3">
             L'équipe
           </p>
-          <h2 className="text-4xl font-extrabold text-[#2D1B8E]">
+          <h2 className="text-4xl font-extrabold text-[#16229C]">
             Derrière BailLyon
           </h2>
         </div>
@@ -25,8 +25,8 @@ export default function Team() {
               <div className="w-20 h-20 mx-auto mb-4 section-placeholder rounded-full flex items-center justify-center text-3xl">
                 {member.emoji}
               </div>
-              <h3 className="font-bold text-[#2D1B8E] text-lg">{member.name}</h3>
-              <p className="text-[#6B4EFF] text-sm font-semibold mb-2">{member.role}</p>
+              <h3 className="font-bold text-[#16229C] text-lg">{member.name}</h3>
+              <p className="text-[#7034F4] text-sm font-semibold mb-2">{member.role}</p>
               <p className="text-gray-500 text-xs leading-relaxed">{member.desc}</p>
             </div>
           ))}

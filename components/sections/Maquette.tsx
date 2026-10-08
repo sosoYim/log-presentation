@@ -3,10 +3,10 @@ export default function Maquette() {
     <section className="py-24 bg-[#F7F5FF]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-[#6B4EFF] font-semibold tracking-widest text-sm uppercase mb-3">
+          <p className="text-[#7034F4] font-semibold tracking-widest text-sm uppercase mb-3">
             Maquette
           </p>
-          <h2 className="text-4xl font-extrabold text-[#2D1B8E]">
+          <h2 className="text-4xl font-extrabold text-[#16229C]">
             Design de l'application
           </h2>
           <p className="text-gray-500 mt-3">Aperçu des écrans principaux de BailLyon</p>
@@ -15,7 +15,7 @@ export default function Maquette() {
         {/* Main placeholder */}
         <div className="section-placeholder rounded-3xl w-full aspect-video flex flex-col items-center justify-center text-[#9B87FF] text-center p-8">
           <div className="text-5xl mb-4">📱</div>
-          <p className="font-bold text-xl text-[#6B4EFF]">Maquette Figma</p>
+          <p className="font-bold text-xl text-[#7034F4]">Maquette Figma</p>
           <p className="text-sm mt-2 opacity-70 max-w-md">
             Intégrer ici l'iframe Figma ou les captures d'écran des écrans principaux<br />
             (accueil, recherche, annonce, messagerie, profil)

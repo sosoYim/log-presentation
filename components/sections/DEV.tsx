@@ -3,10 +3,10 @@ export default function DEV() {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-[#6B4EFF] font-semibold tracking-widest text-sm uppercase mb-3">
+          <p className="text-[#7034F4] font-semibold tracking-widest text-sm uppercase mb-3">
             Développement
           </p>
-          <h2 className="text-4xl font-extrabold text-[#2D1B8E]">
+          <h2 className="text-4xl font-extrabold text-[#16229C]">
             Architecture technique
           </h2>
           <p className="text-gray-500 mt-3">Modèle de données et spécifications API</p>
@@ -15,7 +15,7 @@ export default function DEV() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Modèle de données */}
           <div className="bg-[#F7F5FF] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
-            <div className="bg-[#2D1B8E] px-6 py-4">
+            <div className="bg-[#16229C] px-6 py-4">
               <h3 className="font-bold text-white text-lg">Modèle de données (UML)</h3>
               <p className="text-white/60 text-sm">Entités et relations</p>
             </div>
@@ -33,7 +33,7 @@ export default function DEV() {
 
           {/* API */}
           <div className="bg-[#F7F5FF] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
-            <div className="bg-[#6B4EFF] px-6 py-4">
+            <div className="bg-[#7034F4] px-6 py-4">
               <h3 className="font-bold text-white text-lg">Spécification API</h3>
               <p className="text-white/60 text-sm">OpenAPI / REST endpoints</p>
             </div>
@@ -56,7 +56,7 @@ export default function DEV() {
                   }`}>
                     {e.method}
                   </span>
-                  <code className="text-xs font-mono text-[#6B4EFF] flex-1">{e.path}</code>
+                  <code className="text-xs font-mono text-[#7034F4] flex-1">{e.path}</code>
                   <span className="text-xs text-gray-400">{e.desc}</span>
                 </div>
               ))}
@@ -68,7 +68,7 @@ export default function DEV() {
 
           {/* Architecture */}
           <div className="md:col-span-2 bg-[#F7F5FF] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
-            <div className="bg-[#1E0E6B] px-6 py-4">
+            <div className="bg-[#0D1669] px-6 py-4">
               <h3 className="font-bold text-white text-lg">Architecture & Stack technique</h3>
               <p className="text-white/60 text-sm">Choix technologiques</p>
             </div>
