@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <Link href="/">
-            <Image src="/images/logo.png" alt="BailLyon" width={120} height={40} className="h-10 w-auto brightness-0 invert" />
+            <Image src="/images/logo.svg" alt="BailLyon" width={120} height={40} className="h-10 w-auto brightness-0 invert" />
           </Link>
 
           <nav className="flex flex-wrap justify-center gap-6">
