@@ -14,12 +14,12 @@ export default function DEV() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Modèle de données */}
-          <div className="bg-[#F7F5FF] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
+          <div className="bg-[#E7E8FD] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
             <div className="bg-[#16229C] px-6 py-4">
               <h3 className="font-bold text-white text-lg">Modèle de données (UML)</h3>
               <p className="text-white/60 text-sm">Entités et relations</p>
             </div>
-            <div className="section-placeholder m-4 rounded-2xl aspect-square flex flex-col items-center justify-center text-[#9B87FF] text-center p-6">
+            <div className="section-placeholder m-4 rounded-2xl aspect-square flex flex-col items-center justify-center text-[#BFB0FC] text-center p-6">
               <div className="text-4xl mb-3">🗄️</div>
               <p className="font-semibold text-lg">Diagramme UML</p>
               <p className="text-sm mt-1 opacity-70">
@@ -32,7 +32,7 @@ export default function DEV() {
           </div>
 
           {/* API */}
-          <div className="bg-[#F7F5FF] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
+          <div className="bg-[#E7E8FD] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
             <div className="bg-[#7034F4] px-6 py-4">
               <h3 className="font-bold text-white text-lg">Spécification API</h3>
               <p className="text-white/60 text-sm">OpenAPI / REST endpoints</p>
@@ -60,19 +60,19 @@ export default function DEV() {
                   <span className="text-xs text-gray-400">{e.desc}</span>
                 </div>
               ))}
-              <div className="section-placeholder rounded-xl py-4 flex items-center justify-center text-center text-[#9B87FF]">
+              <div className="section-placeholder rounded-xl py-4 flex items-center justify-center text-center text-[#BFB0FC]">
                 <p className="text-xs">Remplacer par la spec OpenAPI complète (YAML/image)</p>
               </div>
             </div>
           </div>
 
           {/* Architecture */}
-          <div className="md:col-span-2 bg-[#F7F5FF] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
-            <div className="bg-[#0D1669] px-6 py-4">
+          <div className="md:col-span-2 bg-[#E7E8FD] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
+            <div className="bg-[#16229C] px-6 py-4">
               <h3 className="font-bold text-white text-lg">Architecture & Stack technique</h3>
               <p className="text-white/60 text-sm">Choix technologiques</p>
             </div>
-            <div className="section-placeholder m-4 rounded-2xl min-h-48 flex flex-col items-center justify-center text-[#9B87FF] text-center p-8">
+            <div className="section-placeholder m-4 rounded-2xl min-h-48 flex flex-col items-center justify-center text-[#BFB0FC] text-center p-8">
               <div className="text-4xl mb-3">⚙️</div>
               <p className="font-semibold text-lg">Schéma d'architecture</p>
               <p className="text-sm mt-1 opacity-70">

@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #111110;
+  --foreground: #1A202C;
 }
 
 html {
@@ -23,6 +23,6 @@ body {
     #e8e0ff 10px,
     #e8e0ff 20px
   );
-  border: 2px dashed #9B87FF;
+  border: 2px dashed #BFB0FC;
   border-radius: 12px;
 }

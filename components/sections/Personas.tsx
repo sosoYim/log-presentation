@@ -21,7 +21,7 @@ const personas = [
 
 export default function Personas() {
   return (
-    <section className="py-24 bg-[#F7F5FF]">
+    <section className="py-24 bg-[#E7E8FD]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-[#7034F4] font-semibold tracking-widest text-sm uppercase mb-3">

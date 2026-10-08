@@ -272,7 +272,7 @@ export default function ParcoursUtilisateurs() {
           <SectionTitle number="04" title="Value Proposition Canvas" />
           <div className="grid md:grid-cols-2 gap-8">
             {[{ name: "Alice — Demandeuse", emoji: "👩‍🎓" }, { name: "Lucas — Annonceur", emoji: "👨‍💻" }].map((p) => (
-              <div key={p.name} className="section-placeholder rounded-2xl min-h-64 flex flex-col items-center justify-center text-[#9B87FF] text-center p-8">
+              <div key={p.name} className="section-placeholder rounded-2xl min-h-64 flex flex-col items-center justify-center text-[#BFB0FC] text-center p-8">
                 <div className="text-4xl mb-3">{p.emoji}</div>
                 <p className="font-bold text-lg text-[#7034F4]">Value Proposition Canvas</p>
                 <p className="font-semibold text-[#16229C] mt-1">{p.name}</p>

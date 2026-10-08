@@ -20,7 +20,7 @@ export default function Team() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {team.map((member, i) => (
-            <div key={i} className="bg-[#F7F5FF] rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
+            <div key={i} className="bg-[#E7E8FD] rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
               {/* Avatar placeholder */}
               <div className="w-20 h-20 mx-auto mb-4 section-placeholder rounded-full flex items-center justify-center text-3xl">
                 {member.emoji}
