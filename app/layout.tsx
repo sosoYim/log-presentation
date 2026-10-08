@@ -7,7 +7,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "BailLyon — Pars serein, loue malin",
   description: "La plateforme de sous-location étudiante à Lyon. Trouvez ou proposez un logement pour votre stage, échange ou quelques mois.",
-  icons: { icon: "/images/favicon.png" },
+  icons: { icon: "/images/logoIcon.svg" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

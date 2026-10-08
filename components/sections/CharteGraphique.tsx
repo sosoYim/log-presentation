@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const colors = [
   { name: "Primaire", hex: "#7034F4", label: "Purple Primary" },
   { name: "Foncé", hex: "#16229C", label: "Purple Dark" },
@@ -58,22 +60,16 @@ export default function CharteGraphique() {
               </div>
             </div>
 
-            {/* Logo placeholder */}
+            {/* Logo */}
             <h3 className="font-bold text-[#16229C] text-xl mt-8 mb-4">Logo</h3>
-            <div className="section-placeholder rounded-2xl p-8 flex items-center justify-center gap-8">
+            <div className="bg-[#E7E8FD] rounded-2xl p-8 flex items-center justify-center gap-12">
               <div className="flex flex-col items-center gap-2">
-                <div className="w-16 h-16 rounded-2xl bg-[#7034F4] flex items-center justify-center text-white font-bold text-xl">BL</div>
-                <p className="text-xs text-[#BFB0FC]">Icône</p>
+                <Image src="/images/logoIcon.svg" alt="Favicon BailLyon" width={64} height={64} className="rounded-2xl" />
               </div>
               <div className="flex flex-col items-center gap-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#7034F4] flex items-center justify-center text-white font-bold text-sm">BL</div>
-                  <span className="text-2xl font-extrabold text-[#16229C]">BailLyon</span>
-                </div>
-                <p className="text-xs text-[#BFB0FC]">Logo complet</p>
+                <Image src="/images/logo.svg" alt="Logo BailLyon" width={160} height={40} className="h-10 w-auto" />
               </div>
             </div>
-            <p className="text-xs text-center text-[#BFB0FC] mt-2">Remplacer par le logo officiel</p>
           </div>
         </div>
 
