@@ -65,7 +65,7 @@ function PersonaCard({ p }: { p: typeof personas[0] }) {
           </div>
         </div>
 
-        <blockquote className="bg-[#E7E8FD] rounded-2xl px-6 py-5 mb-4 border-l-4 border-[#7034F4]">
+        <blockquote className="bg-[#E7E8FD] rounded-2xl px-6 py-5 mb-4 shadow-sm">
           <p className="text-[#16229C] font-semibold text-base leading-relaxed italic">
             « {p.quote} »
           </p>

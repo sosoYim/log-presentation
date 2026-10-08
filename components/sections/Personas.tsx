@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 const personas = [
   {
     name: "Alice",
     role: "Étudiante demandeuse",
     tag: "Je cherche un logement",
-    emoji: "👩‍🎓",
+    faceOrigin: "76% 12%",
     tagStyle: "bg-[#E7E8FD] text-[#7034F4]",
     borderColor: "border-t-[#7034F4]",
     quote: "L'hôtel, c'est trop cher. Un bail d'un an, c'est trop long. Comment trouver une chambre juste pour mon stage de 2 mois à Lyon ?",
@@ -12,7 +14,7 @@ const personas = [
     name: "Lucas",
     role: "Étudiant annonceur",
     tag: "Je propose mon logement",
-    emoji: "👨‍💻",
+    faceOrigin: "30% 2%",
     tagStyle: "bg-[#16229C] text-white",
     borderColor: "border-t-[#16229C]",
     quote: "Je pars en échange à l'étranger pendant 3 mois. Mon loyer continue de tourner... et ma chambre va rester vide tout ce temps ?",
@@ -39,8 +41,14 @@ export default function Personas() {
           {personas.map((p, i) => (
             <div key={i} className={`bg-white rounded-3xl border-t-4 ${p.borderColor} shadow-sm p-8`}>
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 section-placeholder rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
-                  {p.emoji}
+                <div className="w-16 h-16 rounded-2xl flex-shrink-0 overflow-hidden relative ring-2 ring-[#BFB0FC] shadow-md">
+                  <Image
+                    src="/images/auth/bin2.png"
+                    alt={p.name}
+                    fill
+                    className="object-cover scale-[3]"
+                    style={{ transformOrigin: p.faceOrigin }}
+                  />
                 </div>
                 <div>
                   <h3 className="font-extrabold text-[#16229C] text-2xl">{p.name}</h3>
@@ -51,7 +59,7 @@ export default function Personas() {
                 </div>
               </div>
 
-              <blockquote className="bg-[#E7E8FD] rounded-2xl px-6 py-5 border-l-4 border-[#7034F4]">
+              <blockquote className="bg-[#E7E8FD] rounded-2xl px-6 py-5 shadow-sm">
                 <p className="text-[#16229C] font-semibold text-base leading-relaxed italic">
                   « {p.quote} »
                 </p>
