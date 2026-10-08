@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a2e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.section-placeholder {
+  background: repeating-linear-gradient(
+    45deg,
+    #f0eeff,
+    #f0eeff 10px,
+    #e8e0ff 10px,
+    #e8e0ff 20px
+  );
+  border: 2px dashed #9B87FF;
+  border-radius: 12px;
+}
