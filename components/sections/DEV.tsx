@@ -1,6 +1,7 @@
+import ArchitectureDiagram from "@/components/ArchitectureDiagram";
 import DataModelDiagram from "@/components/DataModelDiagram";
 
-const stores = [
+const stores: { name: string; color: string; planned?: boolean; desc: string; paths: string[] }[] = [
   {
     name: "Cloud Firestore",
     color: "bg-[#16229C]",
@@ -12,6 +13,53 @@ const stores = [
     color: "bg-[#7034F4]",
     desc: "Messagerie en temps réel. Les messages sont imbriqués sous leur conversation, qui reprend l'identifiant de la demande de réservation.",
     paths: ["conversations", "conversations/{id}/messages"],
+  },
+  {
+    name: "Cloudflare D1",
+    color: "bg-gray-400",
+    planned: true,
+    desc: "Côté Worker, deux journaux. Historique de connexion : première connexion, dernière activité et appareil de chaque utilisateur. Journal d'audit : chaque changement important (demande acceptée ou refusée, annonce publiée ou désactivée) avec son auteur et sa date.",
+    paths: ["sublyon-sessions"],
+  },
+  {
+    name: "Cloudflare R2",
+    color: "bg-gray-400",
+    planned: true,
+    desc: "Stockage des photos d'annonces : le Worker recevra les images envoyées par l'annonceur et leur adresse sera enregistrée dans l'annonce.",
+    paths: ["sublyon-media"],
+  },
+];
+
+const stack: { title: string; items: { name: string; planned?: boolean }[] }[] = [
+  {
+    title: "Frontend",
+    items: [
+      { name: "Angular 22" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS 4" },
+      { name: "Spartan UI" },
+      { name: "PWA" },
+      { name: "Leaflet" },
+      { name: "Google Places", planned: true },
+    ],
+  },
+  {
+    title: "Backend",
+    items: [{ name: "Cloudflare Workers" }, { name: "TypeScript" }, { name: "Wrangler" }],
+  },
+  {
+    title: "Données & services",
+    items: [
+      { name: "Firebase Authentication" },
+      { name: "Cloud Firestore" },
+      { name: "Realtime Database" },
+      { name: "Cloudflare D1", planned: true },
+      { name: "Cloudflare R2", planned: true },
+    ],
+  },
+  {
+    title: "Hébergement & tests",
+    items: [{ name: "Firebase Hosting" }, { name: "Playwright" }, { name: "Vitest" }],
   },
 ];
 
@@ -75,6 +123,11 @@ export default function DEV() {
                   <div className="flex items-center gap-2">
                     <span className={`w-3 h-3 rounded-sm ${s.color}`} />
                     <h4 className="font-bold text-sm text-[#16229C]">{s.name}</h4>
+                    {s.planned && (
+                      <span className="text-xs text-gray-500 border border-dashed border-gray-300 rounded-md px-2 py-0.5">
+                        prévu
+                      </span>
+                    )}
                   </div>
                   <p className="text-xs text-gray-500 mt-1.5">{s.desc}</p>
                   <div className="flex flex-wrap gap-1.5 mt-2">
@@ -145,13 +198,33 @@ export default function DEV() {
               <h3 className="font-bold text-white text-lg">Architecture & Stack technique</h3>
               <p className="text-white/60 text-sm">Choix technologiques</p>
             </div>
-            <div className="section-placeholder m-4 rounded-2xl min-h-48 flex flex-col items-center justify-center text-[#BFB0FC] text-center p-8">
-              <div className="text-4xl mb-3">⚙️</div>
-              <p className="font-semibold text-lg">Schéma d'architecture</p>
-              <p className="text-sm mt-1 opacity-70">
-                Insérer ici le diagramme d'architecture (image à remplacer)<br />
-                Frontend · Backend · Base de données · Auth
+            <div className="bg-white m-4 rounded-2xl p-4">
+              <ArchitectureDiagram />
+              <p className="text-xs text-gray-400 mt-3">
+                L&apos;application parle directement à Firebase avec le SDK. Le Worker Cloudflare n&apos;expose pour l&apos;instant que la route de santé.
               </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 px-4 pb-4">
+              {stack.map((group) => (
+                <div key={group.title} className="bg-white rounded-xl px-4 py-3 border border-purple-50">
+                  <h4 className="font-bold text-sm text-[#16229C]">{group.title}</h4>
+                  <div className="flex flex-wrap gap-1.5 mt-2">
+                    {group.items.map((item) => (
+                      <span
+                        key={item.name}
+                        className={`text-xs rounded-md px-2 py-0.5 ${
+                          item.planned
+                            ? "text-gray-500 border border-dashed border-gray-300"
+                            : "text-[#7034F4] bg-[#E7E8FD]"
+                        }`}
+                      >
+                        {item.name}
+                        {item.planned && " (prévu)"}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
