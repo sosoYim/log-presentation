@@ -13,12 +13,6 @@ const stores = [
     desc: "Messagerie en temps réel. Les messages sont imbriqués sous leur conversation, qui reprend l'identifiant de la demande de réservation.",
     paths: ["conversations", "conversations/{id}/messages"],
   },
-  {
-    name: "Cloudflare D1 · R2",
-    color: "bg-gray-400",
-    desc: "Bases liées au Worker mais pas encore utilisées : l'API n'expose que /api/health, aucune table n'existe pour l'instant.",
-    paths: ["sublyon-sessions", "sublyon-media"],
-  },
 ];
 
 export default function DEV() {
@@ -124,8 +118,23 @@ export default function DEV() {
                   <span className="text-xs text-gray-400">{e.desc}</span>
                 </div>
               ))}
-              <div className="section-placeholder rounded-xl py-4 flex items-center justify-center text-center text-[#BFB0FC]">
-                <p className="text-xs">Remplacer par la spec OpenAPI complète (YAML/image)</p>
+              <div className="flex flex-wrap items-center gap-3 pt-1">
+                <a
+                  href="/api-docs.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#7034F4] text-white text-sm font-semibold rounded-xl px-4 py-2.5 hover:bg-[#16229C] transition-colors"
+                >
+                  Ouvrir la spécification OpenAPI
+                </a>
+                <a
+                  href="/openapi.yaml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-[#7034F4] underline underline-offset-4 hover:text-[#16229C]"
+                >
+                  Fichier YAML
+                </a>
               </div>
             </div>
           </div>
