@@ -98,13 +98,13 @@ export default function DEV() {
             <div className="p-4 flex flex-col gap-3">
               {/* Endpoint examples */}
               {[
-                { method: "POST", path: "/users", desc: "Création de compte" },
-                { method: "POST", path: "/auth/connexion", desc: "Lien de connexion email" },
-                { method: "GET", path: "/annonces", desc: "Recherche de logements" },
-                { method: "POST", path: "/annonces", desc: "Publier une annonce" },
-                { method: "POST", path: "/demandes", desc: "Envoyer une demande" },
-                { method: "PATCH", path: "/demandes/{id}", desc: "Accepter / Refuser" },
-                { method: "GET", path: "/messages/{id}", desc: "Conversation" },
+                { method: "POST", path: "/users", desc: "Création du profil" },
+                { method: "POST", path: "/auth/magic-link", desc: "Lien de connexion email" },
+                { method: "GET", path: "/listings", desc: "Recherche de logements" },
+                { method: "POST", path: "/listings", desc: "Publier une annonce" },
+                { method: "POST", path: "/bookingRequests", desc: "Envoyer une demande" },
+                { method: "PATCH", path: "/bookingRequests/{id}", desc: "Accepter / Refuser" },
+                { method: "GET", path: "/conversations/{id}/messages", desc: "Conversation" },
               ].map((e, i) => (
                 <div key={i} className="flex items-center gap-3 bg-white rounded-xl px-4 py-2.5 border border-purple-50">
                   <span className={`text-xs font-bold px-2 py-1 rounded-md w-14 text-center ${

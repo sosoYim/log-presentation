@@ -9,8 +9,8 @@ info:
     **État d'implémentation.** Seule la route `GET /health` est implémentée dans le
     Worker Cloudflare (`workers/src/index.ts`). Les autres opérations sont aujourd'hui
     réalisées côté client avec le SDK Firebase (Firestore et Realtime Database).
-    Cette spécification décrit le contrat REST cible, aligné sur le modèle de données
-    existant. Chaque opération porte l'extension `x-implemented`.
+    Cette spécification décrit le contrat REST cible. Les chemins reprennent les noms
+    des collections existantes (`users`, `listings`, `bookingRequests`, `conversations`). Chaque opération porte l'extension `x-implemented`.
 
 servers:
   - url: http://127.0.0.1:8787/api
@@ -44,11 +44,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Health"
 
-  /auth/connexion:
+  /auth/magic-link:
     post:
       tags: [Authentification]
       summary: Envoyer un lien de connexion par email
-      description: Envoie un lien magique Firebase à l'adresse indiquée.
+      description: |
+        Envoie un lien magique Firebase à l'adresse indiquée. Le lien ramène
+        l'utilisateur sur la page `/auth/callback` de l'application, qui termine la connexion.
       operationId: sendMagicLink
       x-implemented: false
       security: []
@@ -139,7 +141,7 @@ paths:
         "403":
           $ref: "#/components/responses/Forbidden"
 
-  /users/{uid}/favoris:
+  /users/{uid}/favorites:
     parameters:
       - $ref: "#/components/parameters/Uid"
     get:
@@ -162,7 +164,7 @@ paths:
         "403":
           $ref: "#/components/responses/Forbidden"
 
-  /users/{uid}/favoris/{listingId}:
+  /users/{uid}/favorites/{listingId}:
     parameters:
       - $ref: "#/components/parameters/Uid"
       - $ref: "#/components/parameters/ListingId"
@@ -198,7 +200,7 @@ paths:
         "403":
           $ref: "#/components/responses/Forbidden"
 
-  /annonces:
+  /listings:
     get:
       tags: [Annonces]
       summary: Rechercher des logements
@@ -257,7 +259,7 @@ paths:
         "401":
           $ref: "#/components/responses/Unauthorized"
 
-  /annonces/{listingId}:
+  /listings/{listingId}:
     parameters:
       - $ref: "#/components/parameters/ListingId"
     get:
@@ -303,7 +305,7 @@ paths:
         "404":
           $ref: "#/components/responses/NotFound"
 
-  /demandes:
+  /bookingRequests:
     get:
       tags: [Demandes]
       summary: Lister ses demandes de réservation
@@ -354,7 +356,7 @@ paths:
         "404":
           $ref: "#/components/responses/NotFound"
 
-  /demandes/{requestId}:
+  /bookingRequests/{requestId}:
     parameters:
       - $ref: "#/components/parameters/RequestId"
     get:
@@ -427,8 +429,39 @@ paths:
                   $ref: "#/components/schemas/Conversation"
         "401":
           $ref: "#/components/responses/Unauthorized"
+    post:
+      tags: [Messagerie]
+      summary: Ouvrir la conversation d'une demande de réservation
+      description: |
+        La conversation prend l'identifiant de la demande. Si elle existe déjà,
+        elle est retournée telle quelle.
+      operationId: createConversation
+      x-implemented: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [bookingRequestId]
+              properties:
+                bookingRequestId:
+                  type: string
+      responses:
+        "200":
+          description: Conversation ouverte.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Conversation"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
 
-  /messages/{conversationId}:
+  /conversations/{conversationId}/messages:
     parameters:
       - name: conversationId
         in: path
