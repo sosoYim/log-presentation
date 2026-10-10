@@ -1,3 +1,26 @@
+import DataModelDiagram from "@/components/DataModelDiagram";
+
+const stores = [
+  {
+    name: "Cloud Firestore",
+    color: "bg-[#16229C]",
+    desc: "Profils, annonces, favoris et demandes de réservation. Les favoris sont une sous-collection de l'utilisateur.",
+    paths: ["users", "users/{uid}/favorites", "listings", "bookingRequests"],
+  },
+  {
+    name: "Firebase Realtime Database",
+    color: "bg-[#7034F4]",
+    desc: "Messagerie en temps réel. Les messages sont imbriqués sous leur conversation, qui reprend l'identifiant de la demande de réservation.",
+    paths: ["conversations", "conversations/{id}/messages"],
+  },
+  {
+    name: "Cloudflare D1 · R2",
+    color: "bg-gray-400",
+    desc: "Bases liées au Worker mais pas encore utilisées : l'API n'expose que /api/health, aucune table n'existe pour l'instant.",
+    paths: ["sublyon-sessions", "sublyon-media"],
+  },
+];
+
 export default function DEV() {
   return (
     <section className="py-24 bg-white">
@@ -14,20 +37,61 @@ export default function DEV() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Modèle de données */}
-          <div className="bg-[#E7E8FD] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
+          <div className="md:col-span-2 bg-[#E7E8FD] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
             <div className="bg-[#16229C] px-6 py-4">
-              <h3 className="font-bold text-white text-lg">Modèle de données (UML)</h3>
+              <h3 className="font-bold text-white text-lg">Modèle de données (ERD)</h3>
               <p className="text-white/60 text-sm">Entités et relations</p>
             </div>
-            <div className="section-placeholder m-4 rounded-2xl aspect-square flex flex-col items-center justify-center text-[#BFB0FC] text-center p-6">
-              <div className="text-4xl mb-3">🗄️</div>
-              <p className="font-semibold text-lg">Diagramme UML</p>
-              <p className="text-sm mt-1 opacity-70">
-                Insérer ici le schéma UML<br />
-                Utilisateurs, Annonces,<br />
-                Demandes, Réservations<br />
-                (image à remplacer)
+            <div className="bg-white m-4 rounded-2xl p-4">
+              <DataModelDiagram />
+              <div className="flex flex-wrap gap-x-6 gap-y-2 mt-4 text-xs text-gray-500">
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-sm bg-[#16229C]" />
+                  Cloud Firestore
+                </span>
+                <span className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-sm bg-[#7034F4]" />
+                  Realtime Database
+                </span>
+                <span>
+                  <code className="font-mono">role</code> : guest | host
+                </span>
+                <span>
+                  <code className="font-mono">listings.status</code> : published | draft | inactive
+                </span>
+                <span>
+                  <code className="font-mono">bookingRequests.status</code> : pending | accepted | rejected
+                </span>
+              </div>
+              <p className="text-xs text-gray-400 mt-3">
+                Bases NoSQL : les clés étrangères (FK) ne sont pas imposées par la base, mais par le code et les règles de sécurité.
               </p>
+            </div>
+          </div>
+
+          {/* Répartition par base de données */}
+          <div className="bg-[#E7E8FD] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
+            <div className="bg-[#16229C] px-6 py-4">
+              <h3 className="font-bold text-white text-lg">Répartition par base de données</h3>
+              <p className="text-white/60 text-sm">Où vit chaque donnée</p>
+            </div>
+            <div className="p-4 flex flex-col gap-3">
+              {stores.map((s) => (
+                <div key={s.name} className="bg-white rounded-xl px-4 py-3 border border-purple-50">
+                  <div className="flex items-center gap-2">
+                    <span className={`w-3 h-3 rounded-sm ${s.color}`} />
+                    <h4 className="font-bold text-sm text-[#16229C]">{s.name}</h4>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-1.5">{s.desc}</p>
+                  <div className="flex flex-wrap gap-1.5 mt-2">
+                    {s.paths.map((path) => (
+                      <code key={path} className="text-xs font-mono text-[#7034F4] bg-[#E7E8FD] rounded-md px-2 py-0.5">
+                        {path}
+                      </code>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
