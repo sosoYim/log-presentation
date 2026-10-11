@@ -1,3 +1,5 @@
+import LeanCanvas from "@/components/LeanCanvas";
+
 export default function PO() {
   return (
     <section className="py-24 bg-white">
@@ -14,28 +16,23 @@ export default function PO() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Lean Canvas */}
-          <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-purple-50">
+          <div className="md:col-span-2 bg-[#E7E8FD] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
             <div className="bg-[#16229C] px-6 py-4">
               <h3 className="font-bold text-white text-lg">Lean Canvas</h3>
               <p className="text-white/60 text-sm">Vision et modèle économique</p>
             </div>
-            <div className="section-placeholder m-4 rounded-2xl aspect-[4/3] flex flex-col items-center justify-center text-[#BFB0FC] text-center p-6">
-              <div className="text-4xl mb-3">📊</div>
-              <p className="font-semibold text-lg">Lean Canvas</p>
-              <p className="text-sm mt-1 opacity-70">
-                Insérer ici le Lean Canvas complet<br />
-                (image ou tableau à remplacer)
-              </p>
+            <div className="p-4">
+              <LeanCanvas />
             </div>
           </div>
 
           {/* Roadmap */}
-          <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-purple-50">
+          <div className="md:col-span-2 bg-white rounded-3xl overflow-hidden shadow-sm border border-purple-50">
             <div className="bg-[#7034F4] px-6 py-4">
               <h3 className="font-bold text-white text-lg">Roadmap</h3>
               <p className="text-white/60 text-sm">Scénario minimal → cible</p>
             </div>
-            <div className="section-placeholder m-4 rounded-2xl aspect-[4/3] flex flex-col items-center justify-center text-[#BFB0FC] text-center p-6">
+            <div className="section-placeholder m-4 rounded-2xl min-h-64 flex flex-col items-center justify-center text-[#BFB0FC] text-center p-6">
               <div className="text-4xl mb-3">🗺️</div>
               <p className="font-semibold text-lg">Roadmap produit</p>
               <p className="text-sm mt-1 opacity-70">
