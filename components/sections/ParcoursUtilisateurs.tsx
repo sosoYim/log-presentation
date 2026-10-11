@@ -149,85 +149,13 @@ function Storyboard() {
   );
 }
 
-/* ── 3. USER JOURNEY MAP ── */
-const aliceSteps = [
-  { phase: "Recherche", actions: ["Rechercher un logement à Lyon", "Définir ses dates", "Identifier ses besoins"], emotion: "« Vais-je trouver à temps ? »", pain: "Peu de logements adaptés aux courts séjours", ux: "Filtres par dates et localisation", emotionIcon: "😟" },
-  { phase: "Découverte", actions: ["Consulter les annonces", "Comparer les logements", "Vérifier les disponibilités"], emotion: "« Ce logement me convient ! »", pain: "Informations parfois incomplètes", ux: "Annonces claires et profils vérifiés", emotionIcon: "🙂" },
-  { phase: "Inscription", actions: ["Créer son compte", "Compléter son profil", "Vérifier son profil étudiant"], emotion: "« Mon profil est prêt. »", pain: "Inscription trop longue", ux: "Inscription simple", emotionIcon: "😊" },
-  { phase: "Mise en relation", actions: ["Contacter l'offrant", "Poser ses questions", "Envoyer une demande"], emotion: "« Puis-je lui faire confiance ? »", pain: "Attente d'une réponse", ux: "Messagerie intégrée", emotionIcon: "🤔" },
-  { phase: "Confirmation", actions: ["Confirmer la réservation", "Organiser son arrivée", "Récupérer les clés"], emotion: "« Mon logement est confirmé ! »", pain: "Incertitude avant confirmation", ux: "Confirmation claire et rassurante", emotionIcon: "😄" },
-];
-
-const lucasSteps = [
-  { phase: "Besoin", actions: ["Préparer son départ", "Définir ses disponibilités", "Vérifier l'accord du propriétaire"], emotion: "« Je ne veux pas laisser mon logement vide. »", pain: "Peur de laisser le logement vide", ux: "Expliquer clairement le fonctionnement", emotionIcon: "😟" },
-  { phase: "Publication", actions: ["Publier son logement", "Ajouter photos et infos", "Indiquer les dates"], emotion: "« Mon annonce est prête. »", pain: "Création d'annonce chronophage", ux: "Publication simple et rapide", emotionIcon: "😊" },
-  { phase: "Demandes", actions: ["Recevoir les demandes", "Lire les messages", "Répondre aux questions"], emotion: "« Qui est vraiment intéressé ? »", pain: "Demandes peu sérieuses", ux: "Notifications et messagerie", emotionIcon: "🤔" },
-  { phase: "Sélection", actions: ["Consulter les profils", "Échanger avec le candidat", "Choisir un étudiant"], emotion: "« Ce profil semble sérieux. »", pain: "Crainte de choisir la mauvaise personne", ux: "Profils étudiants vérifiés", emotionIcon: "🙂" },
-  { phase: "Confirmation", actions: ["Accepter la demande", "Organiser la remise des clés", "Partir sereinement"], emotion: "« Je peux partir sereinement ! »", pain: "Organisation de la remise des clés", ux: "Confirmation et suivi", emotionIcon: "😄" },
-];
-
-function JourneyTable({ steps, name, tagStyle }: { steps: typeof aliceSteps; name: string; tagStyle: string }) {
+function CroppedPlanche({ src, alt, visibleHeight }: { src: string; alt: string; visibleHeight: number }) {
   return (
-    <div className="mb-12">
-      <span className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6 ${tagStyle}`}>
-        {name}
-      </span>
-      <div className="hidden md:block overflow-x-auto rounded-2xl border border-purple-100">
-        <table className="w-full border-collapse">
-          <thead>
-            <tr className="bg-[#E7E8FD]">
-              <td className="p-3 text-xs font-bold text-gray-400 uppercase tracking-wider w-28">Étape</td>
-              {steps.map((s) => (
-                <td key={s.phase} className="p-3 text-center">
-                  <span className="inline-block bg-[#7034F4] text-white text-xs font-bold px-3 py-1 rounded-full">{s.phase}</span>
-                </td>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="border-t border-purple-50">
-              <td className="p-3 text-xs font-bold text-gray-400 uppercase">Actions</td>
-              {steps.map((s) => (
-                <td key={s.phase} className="p-3 align-top">
-                  <ul className="space-y-1">{s.actions.map((a, i) => <li key={i} className="text-xs text-gray-600">• {a}</li>)}</ul>
-                </td>
-              ))}
-            </tr>
-            <tr className="border-t border-purple-50 bg-purple-50/30">
-              <td className="p-3 text-xs font-bold text-gray-400 uppercase">Émotion</td>
-              {steps.map((s) => (
-                <td key={s.phase} className="p-3 text-center">
-                  <div className="text-2xl mb-1">{s.emotionIcon}</div>
-                  <p className="text-xs text-[#7034F4] italic">{s.emotion}</p>
-                </td>
-              ))}
-            </tr>
-            <tr className="border-t border-purple-50">
-              <td className="p-3 text-xs font-bold text-red-400 uppercase">Pain points</td>
-              {steps.map((s) => (
-                <td key={s.phase} className="p-3"><p className="text-xs text-red-400">{s.pain}</p></td>
-              ))}
-            </tr>
-            <tr className="border-t border-purple-50 bg-emerald-50/30">
-              <td className="p-3 text-xs font-bold text-emerald-600 uppercase">Opportunités UX</td>
-              {steps.map((s) => (
-                <td key={s.phase} className="p-3"><p className="text-xs text-emerald-600">{s.ux}</p></td>
-              ))}
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div className="md:hidden flex flex-col gap-3">
-        {steps.map((s) => (
-          <div key={s.phase} className="bg-white rounded-2xl p-4 border border-purple-100 shadow-sm">
-            <span className="inline-block bg-[#7034F4] text-white text-xs font-bold px-3 py-1 rounded-full mb-3">{s.phase}</span>
-            <ul className="space-y-1 mb-2">{s.actions.map((a, i) => <li key={i} className="text-xs text-gray-600">• {a}</li>)}</ul>
-            <p className="text-xs text-[#7034F4] italic mb-1">{s.emotionIcon} {s.emotion}</p>
-            <p className="text-xs text-red-400 mb-1">✕ {s.pain}</p>
-            <p className="text-xs text-emerald-600">✓ {s.ux}</p>
-          </div>
-        ))}
-      </div>
+    <div
+      className="relative overflow-hidden rounded-3xl border border-purple-100 shadow-sm"
+      style={{ aspectRatio: `1536 / ${visibleHeight}` }}
+    >
+      <Image src={src} alt={alt} fill unoptimized className="object-cover object-bottom" />
     </div>
   );
 }
@@ -272,22 +200,11 @@ export default function ParcoursUtilisateurs() {
 
         <section className="mb-20">
           <SectionTitle number="03" title="User Journey Map" />
-          <JourneyTable steps={aliceSteps} name="👩‍🎓 Alice — Étudiante demandeuse" tagStyle="bg-[#E7E8FD] text-[#7034F4]" />
-          <JourneyTable steps={lucasSteps} name="👨‍💻 Lucas — Étudiant annonceur" tagStyle="bg-[#16229C] text-white" />
-        </section>
-
-        <section>
-          <SectionTitle number="04" title="Value Proposition Canvas" />
-          <div className="grid md:grid-cols-2 gap-8">
-            {[{ name: "Alice — Demandeuse", emoji: "👩‍🎓" }, { name: "Lucas — Annonceur", emoji: "👨‍💻" }].map((p) => (
-              <div key={p.name} className="section-placeholder rounded-2xl min-h-64 flex flex-col items-center justify-center text-[#BFB0FC] text-center p-8">
-                <div className="text-4xl mb-3">{p.emoji}</div>
-                <p className="font-bold text-lg text-[#7034F4]">Value Proposition Canvas</p>
-                <p className="font-semibold text-[#16229C] mt-1">{p.name}</p>
-                <p className="text-xs mt-2 opacity-60">Remplacer par le canvas (image)</p>
-              </div>
-            ))}
-          </div>
+          <CroppedPlanche
+            src="/images/parcours_utilisateurs/user_journey.png"
+            alt="Parcours utilisateur d'Alice (recherche, découverte, inscription, mise en relation, confirmation) et de Lucas (besoin, publication, demandes, sélection, confirmation) : actions, émotions, pain points et opportunités UX à chaque étape"
+            visibleHeight={932}
+          />
         </section>
       </div>
     </div>
