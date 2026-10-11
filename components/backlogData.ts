@@ -311,7 +311,7 @@ export const epics: Epic[] = [
       {
         id: "US-17",
         description:
-          "En tant que demandeur, je souhaite filtrer les annonces par secteur de la Métropole de Lyon et équipements clés afin de cibler les quartiers et le confort désirés.",
+          "En tant que demandeur, je souhaite filtrer les annonces par secteur de la Métropole de Lyon, budget et équipements clés afin de cibler les quartiers et le confort désirés.",
         criteria: [
           "Liste à choix multiples des arrondissements de Lyon (1er au 9e) et communes métropolitaines.",
           "Filtres à cocher pour les équipements indispensables (wifi, meublé, machine à laver).",
