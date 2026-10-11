@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Backlog from "@/components/Backlog";
 import LeanCanvas from "@/components/LeanCanvas";
+import Roadmap from "@/components/Roadmap";
 
 export default function PO() {
   return (
@@ -34,14 +34,8 @@ export default function PO() {
               <h3 className="font-bold text-white text-lg">Roadmap</h3>
               <p className="text-white/60 text-sm">EPICs par sprint, du 09/09 au 11/11</p>
             </div>
-            <div className="p-4">
-              <Image
-                src="/images/po/Roadmap_Produit.png"
-                alt="Roadmap produit : les EPICs répartis sur cinq sprints, du 09/09 au 11/11, par thème (accès compte, annonce logement, recherche carte, messagerie réservation, navigation, tech)"
-                width={1280}
-                height={720}
-                className="w-full h-auto rounded-2xl"
-              />
+            <div className="p-5">
+              <Roadmap />
             </div>
           </div>
 
