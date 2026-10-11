@@ -1,3 +1,4 @@
+import Image from "next/image";
 import LeanCanvas from "@/components/LeanCanvas";
 
 export default function PO() {
@@ -30,16 +31,16 @@ export default function PO() {
           <div className="md:col-span-2 bg-white rounded-3xl overflow-hidden shadow-sm border border-purple-50">
             <div className="bg-[#7034F4] px-6 py-4">
               <h3 className="font-bold text-white text-lg">Roadmap</h3>
-              <p className="text-white/60 text-sm">Scénario minimal → cible</p>
+              <p className="text-white/60 text-sm">EPICs par sprint, du 09/09 au 11/11</p>
             </div>
-            <div className="section-placeholder m-4 rounded-2xl min-h-64 flex flex-col items-center justify-center text-[#BFB0FC] text-center p-6">
-              <div className="text-4xl mb-3">🗺️</div>
-              <p className="font-semibold text-lg">Roadmap produit</p>
-              <p className="text-sm mt-1 opacity-70">
-                Insérer ici la roadmap des EPICs<br />
-                MUST / SHOULD / COULD<br />
-                (image à remplacer)
-              </p>
+            <div className="p-4">
+              <Image
+                src="/images/po/Roadmap_Produit.png"
+                alt="Roadmap produit : les EPICs répartis sur cinq sprints, du 09/09 au 11/11, par thème (accès compte, annonce logement, recherche carte, messagerie réservation, navigation, tech)"
+                width={1280}
+                height={720}
+                className="w-full h-auto rounded-2xl"
+              />
             </div>
           </div>
 
