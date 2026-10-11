@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Backlog from "@/components/Backlog";
 import LeanCanvas from "@/components/LeanCanvas";
 
 export default function PO() {
@@ -12,7 +13,7 @@ export default function PO() {
           <h2 className="text-4xl font-extrabold text-[#16229C]">
             Vision produit
           </h2>
-          <p className="text-gray-500 mt-3">Stratégie, priorisation et roadmap — par Dylan</p>
+          <p className="text-gray-500 mt-3">Stratégie, priorisation et roadmap</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -45,19 +46,13 @@ export default function PO() {
           </div>
 
           {/* EPICs */}
-          <div className="md:col-span-2 bg-white rounded-3xl overflow-hidden shadow-sm border border-purple-50">
+          <div className="md:col-span-2 bg-[#E7E8FD] rounded-3xl overflow-hidden shadow-sm border border-purple-50">
             <div className="bg-[#16229C] px-6 py-4">
               <h3 className="font-bold text-white text-lg">EPICs & Backlog</h3>
               <p className="text-white/60 text-sm">Spécifications fonctionnelles détaillées</p>
             </div>
-            <div className="section-placeholder m-4 rounded-2xl min-h-64 flex flex-col items-center justify-center text-[#BFB0FC] text-center p-8">
-              <div className="text-4xl mb-3">📋</div>
-              <p className="font-semibold text-lg">Tableau des EPICs</p>
-              <p className="text-sm mt-1 opacity-70 max-w-md">
-                Insérer ici le tableau des EPICs avec priorités,<br />
-                critères d'acceptation et statut<br />
-                (image ou tableau à remplacer)
-              </p>
+            <div className="p-4">
+              <Backlog />
             </div>
           </div>
         </div>
