@@ -13,12 +13,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Page d'accueil",
         "desktop": {
-          "src": "/images/maquettes/landing/accueil-desktop.jpg",
+          "src": "/images/maquettes/landing/accueil-desktop.webp",
           "width": 1440,
           "height": 4453
         },
         "mobile": {
-          "src": "/images/maquettes/landing/accueil-mobile.jpg",
+          "src": "/images/maquettes/landing/accueil-mobile.webp",
           "width": 398,
           "height": 5576
         }
@@ -33,12 +33,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Créer un compte",
         "desktop": {
-          "src": "/images/maquettes/connexion/creer-compte-desktop.jpg",
+          "src": "/images/maquettes/connexion/creer-compte-desktop.webp",
           "width": 1440,
           "height": 900
         },
         "mobile": {
-          "src": "/images/maquettes/connexion/creer-compte-mobile.jpg",
+          "src": "/images/maquettes/connexion/creer-compte-mobile.webp",
           "width": 390,
           "height": 844
         }
@@ -46,12 +46,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Se connecter",
         "desktop": {
-          "src": "/images/maquettes/connexion/connexion-desktop.jpg",
+          "src": "/images/maquettes/connexion/connexion-desktop.webp",
           "width": 1440,
           "height": 900
         },
         "mobile": {
-          "src": "/images/maquettes/connexion/connexion-mobile.jpg",
+          "src": "/images/maquettes/connexion/connexion-mobile.webp",
           "width": 390,
           "height": 844
         }
@@ -59,12 +59,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Erreur de saisie",
         "desktop": {
-          "src": "/images/maquettes/connexion/connexion-erreur-desktop.jpg",
+          "src": "/images/maquettes/connexion/connexion-erreur-desktop.webp",
           "width": 1440,
           "height": 900
         },
         "mobile": {
-          "src": "/images/maquettes/connexion/connexion-erreur-mobile.jpg",
+          "src": "/images/maquettes/connexion/connexion-erreur-mobile.webp",
           "width": 390,
           "height": 844
         }
@@ -72,12 +72,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Lien envoyé",
         "desktop": {
-          "src": "/images/maquettes/connexion/lien-envoye-desktop.jpg",
+          "src": "/images/maquettes/connexion/lien-envoye-desktop.webp",
           "width": 1440,
           "height": 900
         },
         "mobile": {
-          "src": "/images/maquettes/connexion/lien-envoye-mobile.jpg",
+          "src": "/images/maquettes/connexion/lien-envoye-mobile.webp",
           "width": 390,
           "height": 844
         }
@@ -85,12 +85,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Choix du rôle",
         "desktop": {
-          "src": "/images/maquettes/connexion/choix-role-desktop.jpg",
+          "src": "/images/maquettes/connexion/choix-role-desktop.webp",
           "width": 1440,
           "height": 900
         },
         "mobile": {
-          "src": "/images/maquettes/connexion/choix-role-mobile.jpg",
+          "src": "/images/maquettes/connexion/choix-role-mobile.webp",
           "width": 390,
           "height": 760
         }
@@ -105,12 +105,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Résultats de recherche",
         "desktop": {
-          "src": "/images/maquettes/recherche/resultats-desktop.jpg",
+          "src": "/images/maquettes/recherche/resultats-desktop.webp",
           "width": 1440,
           "height": 1525
         },
         "mobile": {
-          "src": "/images/maquettes/recherche/resultats-mobile.jpg",
+          "src": "/images/maquettes/recherche/resultats-mobile.webp",
           "width": 390,
           "height": 2391
         }
@@ -118,7 +118,7 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Vue carte",
         "mobile": {
-          "src": "/images/maquettes/recherche/carte-mobile.jpg",
+          "src": "/images/maquettes/recherche/carte-mobile.webp",
           "width": 390,
           "height": 917
         }
@@ -126,12 +126,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Fiche du logement",
         "desktop": {
-          "src": "/images/maquettes/recherche/annonce-desktop.jpg",
+          "src": "/images/maquettes/recherche/annonce-desktop.webp",
           "width": 1440,
           "height": 1485
         },
         "mobile": {
-          "src": "/images/maquettes/recherche/annonce-mobile.jpg",
+          "src": "/images/maquettes/recherche/annonce-mobile.webp",
           "width": 390,
           "height": 1608
         }
@@ -139,12 +139,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Demande de réservation",
         "desktop": {
-          "src": "/images/maquettes/recherche/demande-desktop.jpg",
+          "src": "/images/maquettes/recherche/demande-desktop.webp",
           "width": 1440,
           "height": 1451
         },
         "mobile": {
-          "src": "/images/maquettes/recherche/demande-mobile.jpg",
+          "src": "/images/maquettes/recherche/demande-mobile.webp",
           "width": 390,
           "height": 1346
         }
@@ -152,12 +152,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Demande envoyée",
         "desktop": {
-          "src": "/images/maquettes/recherche/demande-envoyee-desktop.jpg",
+          "src": "/images/maquettes/recherche/demande-envoyee-desktop.webp",
           "width": 1442,
           "height": 1470
         },
         "mobile": {
-          "src": "/images/maquettes/recherche/demande-envoyee-mobile.jpg",
+          "src": "/images/maquettes/recherche/demande-envoyee-mobile.webp",
           "width": 390,
           "height": 1679
         }
@@ -172,12 +172,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Réservations",
         "desktop": {
-          "src": "/images/maquettes/demandeur-compte/reservations-desktop.jpg",
+          "src": "/images/maquettes/demandeur-compte/reservations-desktop.webp",
           "width": 1440,
           "height": 1394
         },
         "mobile": {
-          "src": "/images/maquettes/demandeur-compte/reservations-mobile.jpg",
+          "src": "/images/maquettes/demandeur-compte/reservations-mobile.webp",
           "width": 390,
           "height": 1354
         }
@@ -185,12 +185,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Logements enregistrés",
         "desktop": {
-          "src": "/images/maquettes/demandeur-compte/favoris-desktop.jpg",
+          "src": "/images/maquettes/demandeur-compte/favoris-desktop.webp",
           "width": 1440,
           "height": 1480
         },
         "mobile": {
-          "src": "/images/maquettes/demandeur-compte/favoris-mobile.jpg",
+          "src": "/images/maquettes/demandeur-compte/favoris-mobile.webp",
           "width": 390,
           "height": 1996
         }
@@ -198,12 +198,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Messages",
         "desktop": {
-          "src": "/images/maquettes/demandeur-compte/messagerie-desktop.jpg",
+          "src": "/images/maquettes/demandeur-compte/messagerie-desktop.webp",
           "width": 1440,
           "height": 1300
         },
         "mobile": {
-          "src": "/images/maquettes/demandeur-compte/messagerie-mobile.jpg",
+          "src": "/images/maquettes/demandeur-compte/messagerie-mobile.webp",
           "width": 390,
           "height": 894
         }
@@ -211,7 +211,7 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Conversation",
         "mobile": {
-          "src": "/images/maquettes/demandeur-compte/conversation-mobile.jpg",
+          "src": "/images/maquettes/demandeur-compte/conversation-mobile.webp",
           "width": 390,
           "height": 844
         }
@@ -219,12 +219,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Paramètres du compte",
         "desktop": {
-          "src": "/images/maquettes/demandeur-compte/parametres-desktop.jpg",
+          "src": "/images/maquettes/demandeur-compte/parametres-desktop.webp",
           "width": 1440,
           "height": 1474
         },
         "mobile": {
-          "src": "/images/maquettes/demandeur-compte/parametres-mobile.jpg",
+          "src": "/images/maquettes/demandeur-compte/parametres-mobile.webp",
           "width": 390,
           "height": 984
         }
@@ -239,12 +239,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Étape 1 · Le logement",
         "desktop": {
-          "src": "/images/maquettes/depot-annonce/1-logement-desktop.jpg",
+          "src": "/images/maquettes/depot-annonce/1-logement-desktop.webp",
           "width": 1440,
           "height": 1480
         },
         "mobile": {
-          "src": "/images/maquettes/depot-annonce/1-logement-mobile.jpg",
+          "src": "/images/maquettes/depot-annonce/1-logement-mobile.webp",
           "width": 390,
           "height": 1950
         }
@@ -252,12 +252,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Étape 2 · Photos",
         "desktop": {
-          "src": "/images/maquettes/depot-annonce/2-photos-desktop.jpg",
+          "src": "/images/maquettes/depot-annonce/2-photos-desktop.webp",
           "width": 1440,
           "height": 1271
         },
         "mobile": {
-          "src": "/images/maquettes/depot-annonce/2-photos-mobile.jpg",
+          "src": "/images/maquettes/depot-annonce/2-photos-mobile.webp",
           "width": 390,
           "height": 1956
         }
@@ -265,12 +265,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Étape 3 · Équipements",
         "desktop": {
-          "src": "/images/maquettes/depot-annonce/3-equipements-desktop.jpg",
+          "src": "/images/maquettes/depot-annonce/3-equipements-desktop.webp",
           "width": 1440,
           "height": 1580
         },
         "mobile": {
-          "src": "/images/maquettes/depot-annonce/3-equipements-mobile.jpg",
+          "src": "/images/maquettes/depot-annonce/3-equipements-mobile.webp",
           "width": 390,
           "height": 1799
         }
@@ -278,12 +278,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Étape 5 · Aperçu",
         "desktop": {
-          "src": "/images/maquettes/depot-annonce/5-apercu-desktop.jpg",
+          "src": "/images/maquettes/depot-annonce/5-apercu-desktop.webp",
           "width": 1448,
           "height": 1750
         },
         "mobile": {
-          "src": "/images/maquettes/depot-annonce/5-apercu-mobile.jpg",
+          "src": "/images/maquettes/depot-annonce/5-apercu-mobile.webp",
           "width": 390,
           "height": 1855
         }
@@ -291,12 +291,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Annonce publiée",
         "desktop": {
-          "src": "/images/maquettes/depot-annonce/publiee-desktop.jpg",
+          "src": "/images/maquettes/depot-annonce/publiee-desktop.webp",
           "width": 1450,
           "height": 1310
         },
         "mobile": {
-          "src": "/images/maquettes/depot-annonce/publiee-mobile.jpg",
+          "src": "/images/maquettes/depot-annonce/publiee-mobile.webp",
           "width": 390,
           "height": 1045
         }
@@ -311,12 +311,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Tableau de bord",
         "desktop": {
-          "src": "/images/maquettes/annonceur-compte/tableau-de-bord-desktop.jpg",
+          "src": "/images/maquettes/annonceur-compte/tableau-de-bord-desktop.webp",
           "width": 1440,
           "height": 1340
         },
         "mobile": {
-          "src": "/images/maquettes/annonceur-compte/tableau-de-bord-mobile.jpg",
+          "src": "/images/maquettes/annonceur-compte/tableau-de-bord-mobile.webp",
           "width": 390,
           "height": 1959
         }
@@ -324,12 +324,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Mes annonces",
         "desktop": {
-          "src": "/images/maquettes/annonceur-compte/mes-annonces-desktop.jpg",
+          "src": "/images/maquettes/annonceur-compte/mes-annonces-desktop.webp",
           "width": 1440,
           "height": 1300
         },
         "mobile": {
-          "src": "/images/maquettes/annonceur-compte/mes-annonces-mobile.jpg",
+          "src": "/images/maquettes/annonceur-compte/mes-annonces-mobile.webp",
           "width": 390,
           "height": 1801
         }
@@ -337,12 +337,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Disponibilités",
         "desktop": {
-          "src": "/images/maquettes/annonceur-compte/disponibilites-desktop.jpg",
+          "src": "/images/maquettes/annonceur-compte/disponibilites-desktop.webp",
           "width": 1440,
           "height": 1200
         },
         "mobile": {
-          "src": "/images/maquettes/annonceur-compte/disponibilites-mobile.jpg",
+          "src": "/images/maquettes/annonceur-compte/disponibilites-mobile.webp",
           "width": 390,
           "height": 1931
         }
@@ -350,12 +350,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Demandes reçues",
         "desktop": {
-          "src": "/images/maquettes/annonceur-compte/demandes-recues-desktop.jpg",
+          "src": "/images/maquettes/annonceur-compte/demandes-recues-desktop.webp",
           "width": 1440,
           "height": 1200
         },
         "mobile": {
-          "src": "/images/maquettes/annonceur-compte/demandes-recues-mobile.jpg",
+          "src": "/images/maquettes/annonceur-compte/demandes-recues-mobile.webp",
           "width": 390,
           "height": 1582
         }
@@ -363,12 +363,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Détail d'une demande",
         "desktop": {
-          "src": "/images/maquettes/annonceur-compte/demande-detail-desktop.jpg",
+          "src": "/images/maquettes/annonceur-compte/demande-detail-desktop.webp",
           "width": 1440,
           "height": 1200
         },
         "mobile": {
-          "src": "/images/maquettes/annonceur-compte/demande-detail-mobile.jpg",
+          "src": "/images/maquettes/annonceur-compte/demande-detail-mobile.webp",
           "width": 390,
           "height": 1892
         }
@@ -376,12 +376,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Accepter la demande",
         "desktop": {
-          "src": "/images/maquettes/annonceur-compte/accepter-desktop.jpg",
+          "src": "/images/maquettes/annonceur-compte/accepter-desktop.webp",
           "width": 1440,
           "height": 1200
         },
         "mobile": {
-          "src": "/images/maquettes/annonceur-compte/accepter-mobile.jpg",
+          "src": "/images/maquettes/annonceur-compte/accepter-mobile.webp",
           "width": 390,
           "height": 844
         }
@@ -389,12 +389,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Refuser la demande",
         "desktop": {
-          "src": "/images/maquettes/annonceur-compte/refuser-desktop.jpg",
+          "src": "/images/maquettes/annonceur-compte/refuser-desktop.webp",
           "width": 1440,
           "height": 1400
         },
         "mobile": {
-          "src": "/images/maquettes/annonceur-compte/refuser-mobile.jpg",
+          "src": "/images/maquettes/annonceur-compte/refuser-mobile.webp",
           "width": 390,
           "height": 844
         }
@@ -402,7 +402,7 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Messages",
         "desktop": {
-          "src": "/images/maquettes/annonceur-compte/messagerie-desktop.jpg",
+          "src": "/images/maquettes/annonceur-compte/messagerie-desktop.webp",
           "width": 1440,
           "height": 1330
         }
@@ -417,12 +417,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Aucun résultat",
         "desktop": {
-          "src": "/images/maquettes/etats/aucun-resultat-desktop.jpg",
+          "src": "/images/maquettes/etats/aucun-resultat-desktop.webp",
           "width": 1440,
           "height": 1320
         },
         "mobile": {
-          "src": "/images/maquettes/etats/aucun-resultat-mobile.jpg",
+          "src": "/images/maquettes/etats/aucun-resultat-mobile.webp",
           "width": 390,
           "height": 1283
         }
@@ -430,12 +430,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Aucune réservation",
         "desktop": {
-          "src": "/images/maquettes/etats/reservations-vide-desktop.jpg",
+          "src": "/images/maquettes/etats/reservations-vide-desktop.webp",
           "width": 1440,
           "height": 824
         },
         "mobile": {
-          "src": "/images/maquettes/etats/reservations-vide-mobile.jpg",
+          "src": "/images/maquettes/etats/reservations-vide-mobile.webp",
           "width": 390,
           "height": 843
         }
@@ -443,12 +443,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Tableau de bord vide",
         "desktop": {
-          "src": "/images/maquettes/etats/tableau-de-bord-vide-desktop.jpg",
+          "src": "/images/maquettes/etats/tableau-de-bord-vide-desktop.webp",
           "width": 1440,
           "height": 1330
         },
         "mobile": {
-          "src": "/images/maquettes/etats/tableau-de-bord-vide-mobile.jpg",
+          "src": "/images/maquettes/etats/tableau-de-bord-vide-mobile.webp",
           "width": 390,
           "height": 1104
         }
@@ -456,12 +456,12 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Page 404",
         "desktop": {
-          "src": "/images/maquettes/etats/404-desktop.jpg",
+          "src": "/images/maquettes/etats/404-desktop.webp",
           "width": 1440,
           "height": 990
         },
         "mobile": {
-          "src": "/images/maquettes/etats/404-mobile.jpg",
+          "src": "/images/maquettes/etats/404-mobile.webp",
           "width": 390,
           "height": 759
         }
@@ -469,7 +469,7 @@ export const maquetteSections: MaquetteSection[] = [
       {
         "title": "Menu mobile",
         "mobile": {
-          "src": "/images/maquettes/etats/menu-mobile.jpg",
+          "src": "/images/maquettes/etats/menu-mobile.webp",
           "width": 390,
           "height": 1906
         }
