@@ -32,7 +32,19 @@ function PhoneFrame({ screen, title }: { screen: Screen; title: string }) {
   );
 }
 
-function BrowserFrame({ screen, title }: { screen: Screen; title: string }) {
+// Largeur affichée du cadre : dans une grille de 3 colonnes par défaut, presque pleine largeur quand il est seul.
+const GRID_SIZES = "(min-width: 1280px) 400px, (min-width: 640px) 50vw, 100vw";
+const WIDE_SIZES = "(min-width: 1280px) 920px, (min-width: 768px) 70vw, 100vw";
+
+function BrowserFrame({
+  screen,
+  title,
+  sizes = GRID_SIZES,
+}: {
+  screen: Screen;
+  title: string;
+  sizes?: string;
+}) {
   return (
     <div className="rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm">
       <div className="h-7 bg-gray-100 border-b border-gray-200 flex items-center gap-1.5 px-3">
@@ -52,7 +64,7 @@ function BrowserFrame({ screen, title }: { screen: Screen; title: string }) {
           alt={`${title}, version desktop`}
           width={screen.width}
           height={screen.height}
-          sizes="(min-width: 1280px) 400px, (min-width: 768px) 50vw, 100vw"
+          sizes={sizes}
           className="w-full h-auto"
         />
       </a>
@@ -103,7 +115,11 @@ function FlowSection({
             {single.desktop && (
               <div className="flex-1 min-w-0 w-full">
                 <RowLabel>Desktop</RowLabel>
-                <BrowserFrame screen={single.desktop} title={single.title} />
+                <BrowserFrame
+                  screen={single.desktop}
+                  title={single.title}
+                  sizes={WIDE_SIZES}
+                />
               </div>
             )}
           </div>
