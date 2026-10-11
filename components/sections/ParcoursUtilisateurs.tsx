@@ -149,17 +149,6 @@ function Storyboard() {
   );
 }
 
-function CroppedPlanche({ src, alt, visibleHeight }: { src: string; alt: string; visibleHeight: number }) {
-  return (
-    <div
-      className="relative overflow-hidden rounded-3xl border border-purple-100 shadow-sm"
-      style={{ aspectRatio: `1536 / ${visibleHeight}` }}
-    >
-      <Image src={src} alt={alt} fill unoptimized className="object-cover object-bottom" />
-    </div>
-  );
-}
-
 /* ── SECTION TITLE ── */
 function SectionTitle({ number, title }: { number: string; title: string }) {
   return (
@@ -200,10 +189,13 @@ export default function ParcoursUtilisateurs() {
 
         <section className="mb-20">
           <SectionTitle number="03" title="User Journey Map" />
-          <CroppedPlanche
+          <Image
             src="/images/parcours_utilisateurs/user_journey.png"
             alt="Parcours utilisateur d'Alice (recherche, découverte, inscription, mise en relation, confirmation) et de Lucas (besoin, publication, demandes, sélection, confirmation) : actions, émotions, pain points et opportunités UX à chaque étape"
-            visibleHeight={932}
+            width={1536}
+            height={1024}
+            unoptimized
+            className="w-full h-auto rounded-3xl border border-purple-100 shadow-sm"
           />
         </section>
       </div>
