@@ -60,21 +60,6 @@ export default function PO() {
               </p>
             </div>
           </div>
-
-          {/* Value Proposition Canvas */}
-          <div className="md:col-span-2 bg-white rounded-3xl overflow-hidden shadow-sm border border-purple-50">
-            <div className="bg-[#BFB0FC] px-6 py-4">
-              <h3 className="font-bold text-white text-lg">Value Proposition Canvas</h3>
-              <p className="text-white/80 text-sm">Demandeur & Annonceur</p>
-            </div>
-            <div className="section-placeholder m-4 rounded-2xl min-h-48 flex flex-col items-center justify-center text-[#BFB0FC] text-center p-8">
-              <div className="text-4xl mb-3">🎯</div>
-              <p className="font-semibold text-lg">Value Proposition Canvas</p>
-              <p className="text-sm mt-1 opacity-70">
-                Insérer ici le canvas (image à remplacer)
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
