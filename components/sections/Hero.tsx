@@ -45,6 +45,15 @@ export default function Hero() {
               Voir le site
               <ExternalLink size={16} />
             </a>
+            <a
+              href="https://github.com/sosoYim/m2gdp-g3-log"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-white border-2 border-[#7034F4] text-[#7034F4] hover:bg-[#7034F4] hover:text-white font-semibold px-7 py-3.5 rounded-xl transition-colors text-sm shadow-md"
+            >
+              Github
+              <ExternalLink size={16} />
+            </a>
           </div>
         </div>
 
